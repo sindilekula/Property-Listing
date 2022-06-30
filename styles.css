@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Roboto;
+    font-size: 15px;
+    font-weight: 300;
+    background-color: rgba(255, 255, 255, 0.118);
+}
+#landing {
+    background-image: url(/images/house-1867187_1920.jpg);
+    background-size: cover;
+}
+#properties {
+    background-color: rgba(255, 255, 255, 0.092);
+}
+
+.tabs {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#properties .container {
+    position: absolute;
+    left: 10px;
+    top: 20px;
+    z-index: 2;
+}
+.overlay {
+    background-color: rgba(7, 6, 109, 0.392);
+    z-index: 2;
+    cursor: pointer;
+}
+
+a.houses {
+    font-size: 35px;
+}
+
+
+button.create {
+    width: 150px;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+    height: 40px;
+    border: white;
+}
+
+button.create:hover {
+    background-color: #00aeff;
+}
+
+#display {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 20px;
+    padding: 10px;
+}
+
+.title {
+    font-family: Roboto, sans-serif;
+    font-size: 30px;
+    text-shadow: white;
+}
+
+li.nav-items {
+    /* border: solid 1px black; */
+    background-color: #00aeff;
+    margin: 2px;
+}
+
+.bookings {
+    width: 60vw;
+    height: 150px;
+    background-color: white;
+    margin-left: 200px;
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    box-shadow: 10px 10px 10px white;
+    border: solid 1px black;
+}
+
+.input1 {
+    display: flex;
+    flex-direction: column;
+    width: 170px;
+}
+
+select {
+    height: 40px;
+}
+
+.search {
+    height: 40px; 
+    background-color: #00aeff;
+    border: none;
+}
+
+.form {
+    /* display: flex;
+    flex-direction: column; */
+    box-shadow: 40px 40px 40px white;
+   
+}
+
+#footer {
+    background-color: #004274;
+    height: 50vh;
+}
+
+.footer-heading {
+    margin-top: 100px;
+}
+
+.footer-wrap {
+    background-color: #00335A;
+    height: 120px;
+}
+
+.footer-wrap .container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 50px;
+}
+
+li {
+    list-style: none;
+}
+
+.submit {
+    background-color: #00aeff;
+}
+
+@media screen and (max-width: 1236px){
+    .form {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .bookings {
+        width: fit-content;
+        height: fit-content;
+    }
+}

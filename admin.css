@@ -1,0 +1,40 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.container {
+    border: solid 1px black;
+}
+
+#table {
+    /* background-color: rgb(112, 228, 211); */
+    margin-top: 60px;
+    color: white
+}
+
+table, th, td {
+    border: 1px solid white;
+    border-collapse: collapse;
+}
+th, td {
+    background-color: black;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.tabs {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

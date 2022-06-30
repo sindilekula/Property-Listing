@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+    crossorigin="anonymous"
+  />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <link rel="stylesheet" href="/admin.css" />
+    <title>Document</title>
+
+    <script
+      src="https://kit.fontawesome.com/fade77b74b.js"
+      crossorigin="anonymous"
+    ></script>
+</head>
+<body>
+    
+    <section id="admin">
+        <div class="container bg-dark">
+          <div class="top d-flex justify-content-between">
+            <h4 class="mt-4 text-white">PROPERTIES</h4>
+            <div class="buttons mt-4 d-flex">
+              <div class="button-text mx-2">
+                <button
+                  type="button"
+                  class="btn btn-danger btn-outline-secondary rounded-pill text-dark"
+                  data-bs-toggle="modal"
+                  data-bs-target="#exampleModal"
+                >
+                  <i class="fa-solid fa-plus"></i>
+                </button>
+                <div
+                  class="modal fade"
+                  id="exampleModal"
+                  tabindex="-1"
+                  aria-labelledby="exampleModalLabel"
+                  aria-hidden="true"
+                >
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">
+                          Modal title
+                        </h5>
+                        <button
+                          type="button"
+                          class="btn-close"
+                          data-bs-dismiss="modal"
+                          aria-label="Close"
+                        ></button>
+                      </div>
+                      <div class="modal-body">
+                        <form onsubmit="event.preventDefault(); addProperty()">
+                          <select id="category">
+                            <option value="apartment">Apartment</option>
+                            <option value="studio">Studio</option>
+                            <option value="villa">Villa</option>
+                            <option value="office">Office</option>
+                            <option value="shop">Shop</option>
+                            <option value="mfh">Multi Family Home</option>
+                            <option value="sfh">Single Family Home</option>
+                          </select>
+                          <input
+                            type="text"
+                            name="image"
+                            id="image"
+                            placeholder="Image"
+                          />
+                          <input
+                            type="text"
+                            name="name"
+                            id="name"
+                            placeholder="Name"
+                          />
+                          <input
+                            type="text"
+                            name="location"
+                            id="location"
+                            placeholder="Location"
+                          />
+                          <input
+                            type="number"
+                            name="bedrooms"
+                            id="bedrooms"
+                            placeholder="Number of bedroom(s)"
+                          />
+                          <input
+                            type="number"
+                            name="shower"
+                            id="shower"
+                            placeholder="Number of shower(s)"
+                          />
+                          <input
+                            type="number"
+                            name="garage"
+                            id="garage"
+                            placeholder="Number of garage(s)"
+                          />
+                          <input
+                            type="text"
+                            name="space"
+                            id="space"
+                            placeholder="Space in square ft"
+                          />
+                          <input
+                            type="text"
+                            name="price"
+                            id="price"
+                            placeholder="Price in Rand"
+                          />
+                          <button type="submit" class="btn btn-primary">
+                            Save changes
+                          </button>
+                        </form>
+                      </div>
+                      <div class="modal-footer">
+                        <button
+                          type="submit"
+                          class="btn btn-secondary"
+                          data-bs-dismiss="modal"
+                        >
+                          Close
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <p class="text-white ms-1">Add</p>
+              </div>
+              <div class="button-text mx-2">
+                <button
+                  onsubmit="event.preventDefault();"
+                  class="btn btn-danger btn-outline-secondary rounded-pill text-dark"
+                >
+                  <i class="fa-solid fa-trash"></i>
+                </button>
+                <p class="text-white">Delete</p>
+              </div>
+              <div class="button-text mx-2">
+                <button
+                  class="btn btn-danger btn-outline-secondary rounded-pill text-dark"
+                >
+                  <i class="fa-solid fa-pen"></i>
+                </button>
+                <p class="text-white ms-2">Edit</p>
+              </div>
+              <div class="button-text mx-2">
+                <button
+                  class="btn btn-danger btn-outline-secondary rounded-pill text-dark"
+                >
+                  <i class="fa-solid fa-sort"></i>
+                </button>
+                <p class="text-white ms-1">Sort</p>
+              </div>
+            </div>
+          </div>
+          <div>
+            <table id="table" class="text-center">
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>IMAGE</th>
+                  <th>NAME</th>
+                  <th>LOCATION</th>
+                  <th>BEDROOMS</th>
+                  <th>SHOWER</th>
+                  <th>GARAGE</th>
+                  <th>SPACE</th>
+                  <th>CATEGORY</th>
+                  <th>PRICE</th>
+                  <th>DELETE</th>
+                  <th>EDIT</th>
+                </tr>
+              </thead>
+            </table>
+          </div>
+        </div>
+      </section>
+  
+      <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"
+      ></script>
+      <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+      <script>
+        AOS.init();
+      </script>
+      <script src="/admin.js"></script>
+</body>
+</html>

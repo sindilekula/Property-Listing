@@ -58,11 +58,20 @@ button.create:hover {
 
 
 button.admin {
-    width: 150px;
+    width: 120px;
     background-color: rgba(255, 255, 255, 0.2);
     color: white;
     height: 40px;
     border: white;
+}
+
+button.admin a {
+    text-decoration: none;
+    color: white;
+}
+
+button.admin:hover {
+    background-color: #00aeff;
 }
 
 #display {

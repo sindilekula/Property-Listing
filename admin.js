@@ -10,7 +10,7 @@ let properties = JSON.parse(localStorage.getItem("property"))
         shower: 2,
         garage: 1,
         space: "1200 Sq ft",
-        catagory: "Studio",
+        category: "Studio",
         price: "R400000",
       },
       {
@@ -22,7 +22,7 @@ let properties = JSON.parse(localStorage.getItem("property"))
         shower: 2,
         garage: 1,
         space: "2560 Sq ft",
-        catagory: "Apartment",
+        category: "Apartment",
         price: "R700000",
       },
       {
@@ -34,7 +34,7 @@ let properties = JSON.parse(localStorage.getItem("property"))
         shower: 1,
         garage: 1,
         space: "1200 Sq ft",
-        catagory: "Apartment",
+        category: "Apartment",
         price: "R500000",
       },
       {
@@ -47,7 +47,7 @@ let properties = JSON.parse(localStorage.getItem("property"))
         shower: 2,
         garage: 1,
         space: "2000 Sq ft",
-        catagory: "Apartment",
+        category: "Apartment",
         price: "R300000",
       },
       {
@@ -59,7 +59,7 @@ let properties = JSON.parse(localStorage.getItem("property"))
         shower: 1,
         garage: 1,
         space: "1500 Sq ft",
-        catagory: "Studio",
+        category: "Studio",
         price: "R350000",
       },
       {
@@ -71,7 +71,7 @@ let properties = JSON.parse(localStorage.getItem("property"))
         shower: 1,
         garage: 2,
         space: "800 Sq ft",
-        catagory: "Apartment",
+        category: "Apartment",
         price: "R150000",
       },
       {
@@ -83,7 +83,7 @@ let properties = JSON.parse(localStorage.getItem("property"))
         shower: 2,
         garage: 2,
         space: "6200 Sq ft",
-        catagory: "Villa",
+        category: "Villa",
         price: "R600000",
       },
       {
@@ -95,7 +95,7 @@ let properties = JSON.parse(localStorage.getItem("property"))
         shower: 1,
         garage: 1,
         space: "1800 Sq ft",
-        catagory: "Apartment",
+        category: "Apartment",
         price: "R230000",
       },
       {
@@ -107,7 +107,7 @@ let properties = JSON.parse(localStorage.getItem("property"))
         shower: 1,
         garage: 1,
         space: "1200 Sq ft",
-        catagory: "Single Family Home",
+        category: "Single Family Home",
         price: "R150000",
       },
       {
@@ -119,7 +119,7 @@ let properties = JSON.parse(localStorage.getItem("property"))
         shower: 2,
         garage: 2,
         space: "3000 Sq ft",
-        catagory: "Multi Family Home",
+        category: "Multi Family Home",
         price: "R570000",
       },
       {
@@ -132,7 +132,7 @@ let properties = JSON.parse(localStorage.getItem("property"))
         shower: 2,
         garage: 2,
         space: "5000 Sq ft",
-        catagory: "Villa",
+        categry: "Villa",
         price: "R300000",
       },
       {
@@ -144,7 +144,7 @@ let properties = JSON.parse(localStorage.getItem("property"))
         shower: 1,
         garage: 1,
         space: "1200 Sq ft",
-        catagory: "Single Family Home",
+        category: "Single Family Home",
         price: "R300000",
       },
     ];
@@ -161,7 +161,7 @@ function showProperties(properties) {
         <td class="mx-2" style="width: 200px"><i class="fa-solid fa-shower mx-2"></i>${property.shower}</td>
         <td class="mx-2" style="width: 200px"><i class="fa-solid fa-car mx-2"></i>${property.garage}</td>
         <td class="mx-2" style="width: 300px"><i class="fa-solid fa-ruler-triangle"></i>${property.space}</td>
-        <td class="mx-2" style="width: 300px">${property.catagory}</td>
+        <td class="mx-2" style="width: 300px">${property.category}</td>
         <td class="mx-2" style="width: 300px">${property.price}</td>
     <td class="mx-2" style="width: 300px"><button type="submit" onclick="deleteProperty(${index})"><i class="fa-solid fa-trash"></i></button></td>
         <td class="mx-2" style="width: 300px"><button type="submit"> <i class="fa-solid fa-pen"></i></button></td>

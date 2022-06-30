@@ -151,7 +151,7 @@ let properties = JSON.parse(localStorage.getItem("property"))
 
 function showProperties(properties) {
 //   document.querySelector("#table").innerHTML = "";
-  properties.forEach((property) => {
+  properties.forEach((property, index) => {
     document.querySelector("#table").innerHTML += `<tr>
         <td class="mx-2" style="width: 300px">${property.id}</td>
         <td class="mx-2" style="width: 300px"><img src="${property.imgURL}" style="width: 100px"/></td>
@@ -163,7 +163,7 @@ function showProperties(properties) {
         <td class="mx-2" style="width: 300px"><i class="fa-solid fa-ruler-triangle"></i>${property.space}</td>
         <td class="mx-2" style="width: 300px">${property.catagory}</td>
         <td class="mx-2" style="width: 300px">${property.price}</td>
-        <td class="mx-2" style="width: 300px"><button type="submit"><i class="fa-solid fa-trash"></i></button></td>
+    <td class="mx-2" style="width: 300px"><button type="submit" onclick="deleteProperty(${index})"><i class="fa-solid fa-trash"></i></button></td>
         <td class="mx-2" style="width: 300px"><button type="submit"> <i class="fa-solid fa-pen"></i></button></td>
         `;
   });
@@ -233,3 +233,12 @@ function addProperty() {
 }
 
 console.log(properties.length);
+
+
+function deleteProperty(id) {
+    if (id > -1){
+        properties.splice(id, 1);
+    }
+    localStorage.setItem("property", JSON.stringify(properties));
+    showProperties(properties);
+}

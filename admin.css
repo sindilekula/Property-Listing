@@ -38,3 +38,13 @@ form {
     justify-content: center;
     align-items: center;
 }
+
+@media screen and (max-width: 992px) {
+    #table {
+        width: fit-content;
+    }
+
+    tr {
+        width: fit-content
+    }
+}
